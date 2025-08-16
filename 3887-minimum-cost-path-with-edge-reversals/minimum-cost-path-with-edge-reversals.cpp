@@ -20,6 +20,8 @@ public:
             pq.pop();
             int d=l[0];
             int node=l[1];
+            if(node==n-1)
+                return d;
             if(d>dist[node])
                 continue;
             for(auto j: adj[node]){
