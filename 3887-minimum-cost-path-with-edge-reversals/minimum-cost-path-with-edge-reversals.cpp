@@ -24,7 +24,7 @@ public:
                 return d;
             if(d>dist[node])
                 continue;
-            for(auto j: adj[node]){
+            for(auto &j: adj[node]){
                 int child=j[0];
                 int wt=j[1];
                 if(d+wt<dist[child]){
@@ -32,7 +32,7 @@ public:
                     pq.push({d+wt,child});
                 }
             }
-            for(auto j: radj[node]){
+            for(auto &j: radj[node]){
                 int child=j[0];
                 int wt=j[1];
                 if(d+wt<dist[child]){
